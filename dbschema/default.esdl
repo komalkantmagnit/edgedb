@@ -1,10 +1,10 @@
-# dbschema/default.esdl
-
 module default {
-  type BlogPost {
-    required property title -> str;
-    required property content -> str {
-      default := ""
-    };
+  type Person {
+    required name: str;
   }
-}
+
+  type Movie {
+    title: str;
+    multi actors: Person;
+  }
+};
